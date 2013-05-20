@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>手机搜狐</title>
+        <style type="text/css">
+            #editor{width:970px; background:#eee; border:1px solid #eee; padding:5px;}.topbar{ height:20px; display:block; clear:both;}
+            .topbar img{ vertical-align:middle}
+            .topbar .fl{ float:left; margin-left:7px;}
+            .topbar .fr{ float:right; margin-right:7px;}
+            .topbar .fl2{ float:left; margin-left:7px;}
+            #textarea{width:960px;height:396px;margin:2px;display:none;}
+            #editor-iframe{width:960px;height:396px;margin:2px;}
+        </style>
+    </head>
+    <body>
+        <div id="editor">
+            <div class="topbar">
+                <div class="fl"><img src="images/B.jpg" title="加粗" /></div>
+                <div class="fl2"><img src="images/SLINE.gif" /></div>
+                <div class="fl"><img src="images/tupianku.gif" title="插入图片" /></div>
+                <div class="fl"><img src="images/move.gif" title="插入视频" /></div>
+                <div class="fl"><img src="images/LINK.jpg" title="添加链接" /></div>
+                <div class="fl2"><img src="images/SLINE.gif" /></div>
+                <div class="fl disable"><img src='images/structure.png' title='格式化' /></div>
+                <div class="fl"><img src="images/count.png" title="统计字数" /></div>
+                <div class="fl fr"><span style='cursor: pointer;'>进入源码模式</span></div>
+            </div>
+
+            <textarea id="textarea">
+
+            </textarea>
+
+            <div id="tony-editor">
+
+            </div>
+        </div>
+        <script src="lib/jquery-1.9.1.js"></script>
+        <script src="lib/sea.js"></script>
+        <script>
+            seajs.use('./editor', function(editor) {
+                var Editor = editor.editor;
+                var options = {
+                    'container': 'tony-editor'
+                };
+                new Editor(options);
+            })
+        </script>
+    </body>
+</html>
