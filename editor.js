@@ -40,6 +40,8 @@ define(function(require, exports, module) {
             var me = this, options = me.options;
             doc.body.contentEditable = true;
             doc.body.spellcheck = false;
+            // 也可以用一下方式
+            //doc.designMode = 'on';
             me.bindEvents();
         },
         bindEvents: function() {
